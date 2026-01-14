@@ -1,0 +1,444 @@
+/* ===== HOME PAGE COMPONENT ===== */
+
+.home-container {
+  width: 100%;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 50%, #1a1a2e 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 60px 20px;
+}
+
+/* Hero Background Effects */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(128, 182, 127, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(128, 182, 127, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Hero Content Container */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 800px;
+  animation: slideUp 0.8s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hero Title */
+.hero-title {
+  font-size: 72px;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--accent-green-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: fadeInDown 0.8s ease-out 0.2s both;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hero Subtitle */
+.hero-subtitle {
+  font-size: 32px;
+  color: var(--text-light-gray);
+  margin-bottom: 20px;
+  animation: fadeIn 0.8s ease-out 0.4s both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Hero Description */
+.hero-description {
+  font-size: 18px;
+  color: var(--text-gray);
+  margin-bottom: 30px;
+  line-height: 1.8;
+  animation: fadeIn 0.8s ease-out 0.6s both;
+}
+
+/* Hero Buttons */
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  animation: fadeIn 0.8s ease-out 0.8s both;
+}
+
+/* ===== PORTFOLIO SECTION ===== */
+.portfolio-section {
+  padding: 120px 20px;
+  background: var(--bg-secondary);
+}
+
+/* Section Title */
+.section-title {
+  font-size: var(--font-size-h2);
+  color: var(--text-light);
+  margin-bottom: 60px;
+  position: relative;
+  display: inline-block;
+}
+
+/* Section Title Underline */
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-green), var(--light-green));
+  border-radius: 2px;
+}
+
+/* Portfolio Grid */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 40px;
+  margin-top: 60px;
+}
+
+/* Portfolio Card */
+.portfolio-card {
+  background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-light) 100%);
+  border-radius: var(--border-radius);
+  padding: 50px 30px;
+  text-align: center;
+  transition: var(--transition);
+  border: 2px solid var(--primary-green);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card Shine Effect */
+.portfolio-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(128, 182, 127, 0.15), transparent);
+  transition: left 0.5s ease;
+}
+
+.portfolio-card:hover::before {
+  left: 100%;
+}
+
+/* Card Hover State */
+.portfolio-card:hover {
+  border-color: var(--primary-green);
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(128, 182, 127, 0.2);
+}
+
+/* Developer Card Background */
+.developer-card {
+  background: linear-gradient(135deg, var(--bg-tertiary) 0%, #2a3a2a 100%);
+}
+
+/* Designer Card Background */
+.designer-card {
+  background: linear-gradient(135deg, var(--bg-tertiary) 0%, #283d28 100%);
+}
+
+/* Card Icon */
+.card-icon {
+  margin-bottom: 30px;
+  color: var(--primary-green);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card SVG Animation */
+.portfolio-card svg {
+  filter: drop-shadow(0 0 10px rgba(128, 182, 127, 0.3));
+  transition: var(--transition);
+}
+
+.portfolio-card:hover svg {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Card Title */
+.portfolio-card h3 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: var(--primary-green);
+}
+
+/* Card Description */
+.portfolio-card p {
+  font-size: 16px;
+  color: var(--text-light-gray);
+  margin-bottom: 30px;
+  line-height: 1.8;
+}
+
+/* ===== SKILLS SECTION ===== */
+.skills-section {
+  padding: 120px 20px;
+  background: var(--bg-primary);
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 60px;
+}
+
+/* Skill Category */
+.skill-category {
+  background: var(--bg-secondary);
+  padding: 40px;
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--primary-green);
+  transition: var(--transition);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Skill Category Hover */
+.skill-category:hover {
+  background: var(--bg-tertiary);
+  transform: translateX(10px);
+  box-shadow: 0 8px 20px rgba(128, 182, 127, 0.2);
+}
+
+/* Skill Category Title */
+.skill-category h3 {
+  color: var(--primary-green);
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+/* Skill List */
+.skill-list {
+  list-style: none;
+  padding: 0;
+}
+
+/* Skill List Item */
+.skill-list li {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(128, 182, 127, 0.2);
+  color: var(--text-light-gray);
+  position: relative;
+  padding-left: 25px;
+}
+
+/* Skill List Checkmark */
+.skill-list li:before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--primary-green);
+  font-weight: var(--font-weight-bold);
+}
+
+/* Last Item Border Remove */
+.skill-list li:last-child {
+  border-bottom: none;
+}
+
+/* ===== CTA SECTION ===== */
+.cta-section {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--accent-green-dark) 100%);
+  text-align: center;
+}
+
+/* CTA Title */
+.cta-section h2 {
+  font-size: var(--font-size-h1);
+  margin-bottom: 20px;
+  color: var(--bg-primary);
+}
+
+/* CTA Description */
+.cta-section p {
+  font-size: 20px;
+  margin-bottom: 40px;
+  color: var(--bg-primary);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  padding: 14px 35px;
+  font-size: 16px;
+  font-weight: var(--font-weight-semibold);
+  border-radius: 8px;
+  transition: var(--transition);
+  border: 2px solid transparent;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* Primary Button */
+.btn-primary {
+  background: var(--primary-green);
+  color: var(--bg-primary);
+}
+
+.btn-primary:hover {
+  background: var(--accent-green-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(128, 182, 127, 0.4);
+}
+
+/* Secondary Button */
+.btn-secondary {
+  background: transparent;
+  color: var(--primary-green);
+  border: 2px solid var(--primary-green);
+}
+
+.btn-secondary:hover {
+  background: var(--primary-green);
+  border-color: var(--primary-green);
+  color: var(--bg-primary);
+}
+
+/* Large Button */
+.btn-large {
+  padding: 18px 50px;
+  font-size: 18px;
+  background: white;
+  color: var(--primary-green);
+  font-weight: var(--font-weight-bold);
+}
+
+.btn-large:hover {
+  background: var(--accent-green-light);
+  box-shadow: 0 15px 35px rgba(128, 182, 127, 0.3);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding: 80px 20px;
+  }
+
+  .hero-title {
+    font-size: 48px;
+  }
+
+  .hero-subtitle {
+    font-size: 24px;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .portfolio-card {
+    min-height: 300px;
+    padding: 30px 20px;
+  }
+
+  .portfolio-card h3 {
+    font-size: 24px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .cta-section {
+    padding: 60px 20px;
+  }
+
+  .cta-section h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .portfolio-card {
+    min-height: 250px;
+  }
+
+  .skill-category {
+    padding: 20px;
+  }
+}
