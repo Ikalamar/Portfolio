@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projets de développement web d'Esteban Ringot - Full Stack Developer">
+    <title>Projets Développeur - Esteban Ringot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <a href="index.html" class="logo-text">ER</a>
+            </div>
+
+            <nav class="navbar-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Accueil</a>
+                <a href="developer.html" class="nav-link active">Développement</a>
+                <a href="designer.html" class="nav-link">Graphisme</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Developer Section -->
+        <section id="developer" class="page-section active">
+            <div class="developer-container">
+                <!-- Header -->
+                <div class="page-header">
+                    <div class="container">
+                        <h1>Mes Projets Développeur</h1>
+                        <p>Découvrez une sélection de mes projets de développement web et applications</p>
+                    </div>
+                </div>
+
+                <!-- Featured Projects -->
+                <section class="featured-section">
+                    <div class="container">
+                        <div class="section-title">
+                            <h2>Projets Phares</h2>
+                        </div>
+                        <div class="featured-grid" id="devFeaturedProjects">
+                            <!-- Populated by JavaScript -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Projects Grid -->
+                <section class="projects-section">
+                    <div class="container">
+                        <div class="section-title">
+                            <h2>Tous les Projets</h2>
+                        </div>
+
+                        <!-- Filter Buttons -->
+                        <!-- <div class="filter-buttons" id="devFilterButtons">
+                            <button class="filter-btn active" data-filter="all">Tous</button>
+                            <button class="filter-btn" data-filter="web">Web</button>
+                            <button class="filter-btn" data-filter="backend">Backend</button>
+                            <button class="filter-btn" data-filter="full-stack">Full Stack</button>
+                        </div> -->
+
+                        <!-- Projects Grid -->
+                        <div class="projects-grid" id="devProjectsGrid">
+                            <!-- Populated by JavaScript -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CTA Section -->
+                <!-- <section class="cta-section">
+                    <div class="container text-center">
+                        <h2>Intéressé par un projet similaire ?</h2>
+                        <p>Contactez-moi pour discuter de votre prochaine initiative</p>
+                        <a href="index.html#contact" class="btn btn-large">Demander un devis</a>
+                    </div>
+                </section> -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Esteban Ringot</h4>
+                <p>Développeur Full Stack & Graphiste</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="developer.html">Développement</a></li>
+                    <li><a href="designer.html">Design</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Réseaux Sociaux</h4>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/estéban-ringot-680763239" target="_blank" class="social-link">LinkedIn</a>
+                    <a href="https://github.com/ikalamar" target="_blank" class="social-link">GitHub</a>
+                    <a href="https://twitter.com/Ikalamar_" target="_blank" class="social-link">Twitter</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span> Esteban Ringot. Tous droits réservés.</p>
+            <p>Accessibilité : partiellement conforme</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
