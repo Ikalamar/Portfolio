@@ -93,6 +93,15 @@ const developerProjects = [
     category: 'web'
   },
   {
+    title: 'Bot discord Start.gg - Work in Progress',
+    description: 'Bot discord pour gérer la creation et la gestion de page Start.gg pour les tournois de La Mans Dale.',
+    image: 'assets/img/discord.png',
+    link: 'https://github.com/Ikalamar/Bot-Discord-Startgg',
+    target: "_blank",
+    technologies: ['JavaScript', 'REST'],
+    category: 'backend'
+  },
+  {
     title: 'Ultimate Stage Stricker',
     description: 'Site web pour assité les joueurs dans la phase de pick/ban de stage sur le jeu Super Smash Bros. Ultimate',
     image: 'assets/img/USS.png',
