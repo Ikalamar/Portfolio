@@ -32,6 +32,9 @@
   --transition: all 0.3s ease;
   --shadow: 0 10px 30px rgba(128, 182, 127, 0.2);
   --shadow-light: 0 5px 15px rgba(128, 182, 127, 0.1);
+
+  --media-desktop: 1200px;
+  --media-mobile: 480px;
 }
 
 /* ===== RESET & BASE STYLES ===== */
@@ -206,30 +209,14 @@ h3 {
 
 .hamburger {
   display: none;
-  flex-direction: column;
-  gap: 5px;
   cursor: pointer;
   z-index: 1001;
+  font-size: 24px;
+  color: var(--text-light);
 }
 
-.hamburger span {
-  width: 25px;
-  height: 3px;
-  background: var(--text-light);
-  border-radius: 2px;
+.hamburger i {
   transition: var(--transition);
-}
-
-.hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translate(8px, 8px);
-}
-
-.hamburger.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
 }
 
 /* ===== BUTTONS ===== */
@@ -433,7 +420,17 @@ h3 {
   transition: var(--transition);
 }
 
+.skill-card-icon i {
+  font-size: 24px;
+  color: var(--bg-primary);
+  transition: var(--transition);
+}
+
 .skill-card:hover .skill-card-icon svg {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.skill-card:hover .skill-card-icon i {
   transform: scale(1.1) rotate(5deg);
 }
 
@@ -626,7 +623,17 @@ h3 {
   transition: var(--transition);
 }
 
+.portfolio-card i {
+  font-size: 48px;
+  filter: drop-shadow(0 0 10px rgba(128, 182, 127, 0.3));
+  transition: var(--transition);
+}
+
 .portfolio-card:hover svg {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.portfolio-card:hover i {
   transform: scale(1.1) rotate(5deg);
 }
 
@@ -1050,7 +1057,7 @@ h3 {
 
   .navbar-menu {
     position: fixed;
-    top: 70px;
+    top: 90px;
     right: -100%;
     width: 70%;
     max-width: 300px;
@@ -1131,6 +1138,15 @@ h3 {
 
   .stats-grid {
     grid-template-columns: 1fr;
+  }
+
+  .contact-buttons {
+    flex-direction: column;
+  }
+
+  .social-links{
+    flex-direction: column;
+    width: fit-content;
   }
 }
 

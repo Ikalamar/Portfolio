@@ -8,6 +8,18 @@ if (hamburger && navMenu) {
   hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
     navMenu.classList.toggle('active');
+    
+    // Changer l'icône entre burger et croix
+    const icon = hamburger.querySelector('i');
+    if (icon) {
+      if (hamburger.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+      } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    }
   });
 }
 
@@ -15,6 +27,13 @@ function closeMenu() {
   if (hamburger && navMenu) {
     hamburger.classList.remove('active');
     navMenu.classList.remove('active');
+    
+    // Remettre l'icône burger
+    const icon = hamburger.querySelector('i');
+    if (icon) {
+      icon.classList.remove('fa-times');
+      icon.classList.add('fa-bars');
+    }
   }
 }
 
