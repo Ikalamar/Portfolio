@@ -238,7 +238,7 @@ function createFeaturedCard(project, isDesign = false) {
   const tags = isDesign ? project.tools : project.technologies;
   const placeholderImage = isDesign ? 'assets/img/placeholder_graph.png' : 'assets/img/placeholder_dev.png';
   const onerrorHandler = `onerror="this.onerror=null; this.src='${placeholderImage}'"`;
-  return `.Date
+  return `
     <a class="featured-card" href="${project.link}" target="_blank">
       <div class="featured-card-image">
         <img src="${project.image}" alt="${project.title}" ${onerrorHandler} loading="lazy">
