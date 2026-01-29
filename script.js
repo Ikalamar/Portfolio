@@ -87,6 +87,7 @@ const developerProjects = [
     title: 'Accessibilité Numérique - Digital Factory MMA',
     description: 'Participe à l\'optimisation de l\'accessibilité numérique des sites MMA',
     image: 'assets/img/mma.png',
+    link: 'https://www.mma.fr/',
     technologies: ['Jahia CMS', 'HTML', 'CSS', 'JavaScript'],
     category: 'web'
   },
@@ -94,6 +95,7 @@ const developerProjects = [
     title: 'Ultimate Stage Stricker',
     description: 'Site web pour assité les joueurs dans la phase de pick/ban de stage sur le jeu Super Smash Bros. Ultimate',
     image: 'assets/img/USS.png',
+    link: 'https://ikalamar.github.io/Ultimate-Stage-Stricker/',
     technologies: ['HTML', 'CSS', 'JavaScript'],
     category: 'web'
   },
@@ -101,6 +103,7 @@ const developerProjects = [
     title: 'Page de redirection Espace Gestion Flottes - MMA',
     description: 'Page de redirection pour l\'Espace Gestion Flottes de MMA',
     image: 'assets/img/egf.png',
+    link: 'https://www.mma.fr/',
     technologies: ['Angular', 'CSS', 'TypeScript'],
     category: 'web'
   },
@@ -235,8 +238,8 @@ function createFeaturedCard(project, isDesign = false) {
   const tags = isDesign ? project.tools : project.technologies;
   const placeholderImage = isDesign ? 'assets/img/placeholder_graph.png' : 'assets/img/placeholder_dev.png';
   const onerrorHandler = `onerror="this.onerror=null; this.src='${placeholderImage}'"`;
-  return `
-    <div class="featured-card">
+  return `.Date
+    <a class="featured-card" href="${project.link}" target="_blank">
       <div class="featured-card-image">
         <img src="${project.image}" alt="${project.title}" ${onerrorHandler} loading="lazy">
       </div>
@@ -247,7 +250,7 @@ function createFeaturedCard(project, isDesign = false) {
           ${tags.map(tag => `<span class="tech-tag">${tag}</span>`).join('')}
         </div>
       </div>
-    </div>
+    </a>
   `;
 }
 
@@ -256,7 +259,7 @@ function createProjectCard(project, isDesign = false) {
   const placeholderImage = isDesign ? 'assets/img/placeholder_graph.png' : 'assets/img/placeholder_dev.png';
   const onerrorHandler = `onerror="this.onerror=null; this.src='${placeholderImage}'"`;
   return `
-    <div class="project-card">
+    <a class="project-card" href="${project.link}" target="_blank">
       <div class="project-card-image">
         <img src="${project.image}" alt="${project.title}" ${onerrorHandler} loading="lazy">
       </div>
@@ -267,7 +270,7 @@ function createProjectCard(project, isDesign = false) {
           ${tags.map(tag => `<span class="tech-tag">${tag}</span>`).join('')}
         </div>
       </div>
-    </div>
+    </a>
   `;
 }
 
