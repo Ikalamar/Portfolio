@@ -88,6 +88,7 @@ const developerProjects = [
     description: 'Participe à l\'optimisation de l\'accessibilité numérique des sites MMA',
     image: 'assets/img/mma.png',
     link: 'https://www.mma.fr/',
+    target: "_blank",
     technologies: ['Jahia CMS', 'HTML', 'CSS', 'JavaScript'],
     category: 'web'
   },
@@ -95,6 +96,7 @@ const developerProjects = [
     title: 'Ultimate Stage Stricker',
     description: 'Site web pour assité les joueurs dans la phase de pick/ban de stage sur le jeu Super Smash Bros. Ultimate',
     image: 'assets/img/USS.png',
+    target: "_blank",
     link: 'https://ikalamar.github.io/Ultimate-Stage-Stricker/',
     technologies: ['HTML', 'CSS', 'JavaScript'],
     category: 'web'
@@ -104,6 +106,7 @@ const developerProjects = [
     description: 'Page de redirection pour l\'Espace Gestion Flottes de MMA',
     image: 'assets/img/egf.png',
     link: 'https://www.mma.fr/',
+    target: "_blank",
     technologies: ['Angular', 'CSS', 'TypeScript'],
     category: 'web'
   },
@@ -154,6 +157,8 @@ const designerProjects = [
     title: 'Equipe Versus - eSport Line 2025-26',
     description: 'Graphiste pour la création des visuels de l\'équipe Versus eSport Line 2026',
     image: 'assets/img/eLine26.jpg',
+    link: '#',
+    target: "_self",
     tools: ['Photoshop', 'Affinity', 'Blender'],
     category: 'illustration'
   },
@@ -161,6 +166,8 @@ const designerProjects = [
     title: 'Equipe Smash - eSport Line 2023-24',
     description: 'Graphiste pour la création des visuels de l\'équipe Smash eSport Line 2024-25',
     image: 'assets/img/eLine23.jpg',
+    link: '#',
+    target: "_self",
     tools: ['Photoshop', 'Blender'],
     category: 'illustration'
   },
@@ -168,6 +175,8 @@ const designerProjects = [
     title: 'Bagarre 2 Bar',
     description: 'Graphiste pour les communications des tournois hebdomadaires Bagarre 2 Bar',
     image: 'assets/img/Bagarre2Bar.png',
+    link: '#',
+    target: "_self",
     tools: ['Photoshop'],
     category: 'illustration'
   },
@@ -175,6 +184,8 @@ const designerProjects = [
     title: 'DragonFeu Luna Cup',
     description: 'Graphiste pour le tournoi DragonFeu Luna Cup sur Super Smash Bros. Ultimate',
     image: 'assets/img/DFLC.png',
+    link: '#',
+    target: "_self",
     tools: ['Photoshop', 'Blender'],
     category: 'illustration'
   },
@@ -182,6 +193,8 @@ const designerProjects = [
     title: 'Very SUS Arena',
     description: 'Graphiste pour le tournoi Very SUS Arena sur Super Smash Bros. Ultimate',
     image: 'assets/img/VSA.jpg',
+    link: '#',
+    target: "_self",
     tools: ['Photoshop', 'Blender'],
     category: 'illustration'
   },
@@ -189,6 +202,8 @@ const designerProjects = [
     title: 'DragonFeu Bastos Cup',
     description: 'Graphiste pour le tournoi DragonFeu Bastos Cup sur Super Smash Bros. Ultimate',
     image: 'assets/img/DFBC.png',
+    link: '#',
+    target: "_self",
     tools: ['Photoshop'],
     category: 'illustration'
   },
@@ -259,7 +274,7 @@ function createProjectCard(project, isDesign = false) {
   const placeholderImage = isDesign ? 'assets/img/placeholder_graph.png' : 'assets/img/placeholder_dev.png';
   const onerrorHandler = `onerror="this.onerror=null; this.src='${placeholderImage}'"`;
   return `
-    <a class="project-card" href="${project.link}" target="_blank">
+    <a class="project-card" href="${project.link}" target="${project.target}">
       <div class="project-card-image">
         <img src="${project.image}" alt="${project.title}" ${onerrorHandler} loading="lazy">
       </div>
