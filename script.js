@@ -112,12 +112,21 @@ const developerProjects = [
     category: 'web'
   },
   {
+    title: 'Graphe automatisé pour les tournois Start.gg',
+    description: 'Graphe automatisé sous Google Sheets pour visualiser les resultats ou le seeding des joueurs sur les tournois du site Start.gg',
+    image: 'assets/img/graph.png',
+    link: 'https://drive.google.com/drive/folders/1Yva_ZpuDXLV_utIhBzfpBwH8S-d3HjMV?usp=sharing',
+    target: "_blank",
+    technologies: ['Google Apps Script','JavaScript', 'GraphQL'],
+    category: 'backend'
+  },
+  {
     title: 'Bot discord Start.gg - Work in Progress',
     description: 'Bot discord pour gérer la creation et la gestion de page Start.gg pour les tournois de La Mans Dale.',
     image: 'assets/img/discord.png',
     link: 'https://github.com/Ikalamar/Bot-Discord-Startgg',
     target: "_blank",
-    technologies: ['JavaScript', 'REST'],
+    technologies: ['JavaScript', 'REST', 'GraphQL'],
     category: 'backend'
   },
   {
