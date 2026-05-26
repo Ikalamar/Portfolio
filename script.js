@@ -103,12 +103,30 @@ function animateSkillBars() {
 
 const developerProjects = [
   {
+    title: 'Design System - Solution Digitale MMA',
+    description: 'Participation à l\'implémentation du Design System MMA sur les différents sites MMA',
+    image: 'assets/img/mma.png',
+    link: 'https://www.mma.fr/',
+    target: "_blank",
+    technologies: ['Jahia CMS', 'HTML', 'SCSS', 'JavaScript'],
+    category: 'web'
+  },
+    {
+    title: '24h du Code 2026 - COVEA',
+    description: 'Participation au sujet proposé par COVEA lors de l\'édition 2026 des 24h du Code. Consiste en la création d\'un service d\'API afin que les joueurs puissent naviguer et conquérir des iles virtuelles.',
+    image: '',
+    link: '#',
+    target: "_blank",
+    technologies: ['Kotlin', 'Angular 21'],
+    category: 'web'
+  },
+  {
     title: 'Accessibilité Numérique - Digital Factory MMA',
     description: 'Participe à l\'optimisation de l\'accessibilité numérique des sites MMA',
     image: 'assets/img/mma.png',
     link: 'https://www.mma.fr/',
     target: "_blank",
-    technologies: ['Jahia CMS', 'HTML', 'CSS', 'JavaScript'],
+    technologies: ['Jahia CMS', 'HTML', 'SCSS', 'JavaScript'],
     category: 'web'
   },
   {
@@ -144,7 +162,7 @@ const developerProjects = [
     image: 'assets/img/egf.png',
     link: 'https://www.mma.fr/',
     target: "_blank",
-    technologies: ['Angular', 'CSS', 'TypeScript'],
+    technologies: ['Angular 16', 'CSS', 'TypeScript'],
     category: 'web'
   },
 ];
