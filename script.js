@@ -209,6 +209,15 @@ function renderDeveloperProjects() {
 
 const designerProjects = [
   {
+    title: 'ENSMASH',
+    description: 'Création du logo et des visuels pour le tournois ENSMASH sur Super Smash Bros. Ultimate et 2XKO, qui à eu lieu à l\'ENSIM.',
+    image: 'assets/img/ensmash.png',
+    link: '#',
+    target: "_self",
+    tools: ['Photoshop', 'Affinity', 'Blender'],
+    category: 'illustration'
+  },
+  {
     title: 'Equipe Versus - eSport Line 2025-26',
     description: 'Graphiste pour la création des visuels de l\'équipe Versus eSport Line 2026',
     image: 'assets/img/eLine26.jpg',
