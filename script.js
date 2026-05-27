@@ -148,21 +148,21 @@ const developerProjects = [
     category: 'backend'
   },
   {
-    title: 'Ultimate Stage Stricker',
-    description: 'Site web pour assité les joueurs dans la phase de pick/ban de stage sur le jeu Super Smash Bros. Ultimate',
-    image: 'assets/img/USS.png',
-    target: "_blank",
-    link: 'https://ikalamar.github.io/Ultimate-Stage-Stricker/',
-    technologies: ['HTML', 'CSS', 'JavaScript'],
-    category: 'web'
-  },
-  {
     title: 'Page de redirection Espace Gestion Flottes - MMA',
     description: 'Page de redirection pour l\'Espace Gestion Flottes de MMA',
     image: 'assets/img/egf.png',
     link: 'https://www.mma.fr/',
     target: "_blank",
     technologies: ['Angular 16', 'CSS', 'TypeScript'],
+    category: 'web'
+  },
+  {
+    title: 'Ultimate Stage Stricker',
+    description: 'Site web pour assité les joueurs dans la phase de pick/ban de stage sur le jeu Super Smash Bros. Ultimate',
+    image: 'assets/img/USS.png',
+    target: "_blank",
+    link: 'https://ikalamar.github.io/Ultimate-Stage-Stricker/',
+    technologies: ['HTML', 'CSS', 'JavaScript'],
     category: 'web'
   },
 ];
@@ -209,64 +209,85 @@ function renderDeveloperProjects() {
 
 const designerProjects = [
   {
+    id: 'ensmash',
     title: 'ENSMASH',
     description: 'Création du logo et des visuels pour le tournois ENSMASH sur Super Smash Bros. Ultimate et 2XKO, qui à eu lieu à l\'ENSIM.',
     image: 'assets/img/ensmash.png',
-    link: '#',
+    galleryFolder: 'assets/img/ensmash/',
+    galleryExt: '.png', // Extension par défaut des images numérotées
+    link: 'projet-insta.html?id=ensmash',
     target: "_self",
     tools: ['Photoshop', 'Affinity', 'Blender'],
     category: 'illustration'
   },
   {
+    id: 'eline-2026',
     title: 'Equipe Versus - eSport Line 2025-26',
     description: 'Graphiste pour la création des visuels de l\'équipe Versus eSport Line 2026',
     image: 'assets/img/eLine26.jpg',
-    link: '#',
+    galleryFolder: 'assets/img/eline26/',
+    galleryExt: '.png',
+    link: 'projet-insta.html?id=eline-2026',
     target: "_self",
     tools: ['Photoshop', 'Affinity', 'Blender'],
     category: 'illustration'
   },
   {
+    id: 'eline-2024',
     title: 'Equipe Smash - eSport Line 2023-24',
     description: 'Graphiste pour la création des visuels de l\'équipe Smash eSport Line 2024-25',
     image: 'assets/img/eLine23.jpg',
-    link: '#',
+    galleryFolder: 'assets/img/eline23/',
+    galleryExt: '.jpg',
+    link: 'projet-insta.html?id=eline-2024',
     target: "_self",
     tools: ['Photoshop', 'Blender'],
     category: 'illustration'
   },
   {
+    id: 'bagarre-2-bar',
     title: 'Bagarre 2 Bar',
     description: 'Graphiste pour les communications des tournois hebdomadaires Bagarre 2 Bar',
     image: 'assets/img/Bagarre2Bar.png',
-    link: '#',
+    galleryFolder: 'assets/img/bagarre2bar/',
+    galleryExt: '.png',
+    link: 'projet-insta.html?id=bagarre-2-bar',
     target: "_self",
     tools: ['Photoshop'],
     category: 'illustration'
   },
-    {
+  {
+    id: 'dragonfeu-luna-cup',
     title: 'DragonFeu Luna Cup',
     description: 'Graphiste pour le tournoi DragonFeu Luna Cup sur Super Smash Bros. Ultimate',
     image: 'assets/img/DFLC.png',
-    link: '#',
+    galleryFolder: 'assets/img/DFLC/',
+    galleryExt: '.png',
+    link: 'projet-insta.html?id=dragonfeu-luna-cup',
     target: "_self",
     tools: ['Photoshop', 'Blender'],
     category: 'illustration'
   },
   {
+    id: 'very-sus-arena',
     title: 'Very SUS Arena',
     description: 'Graphiste pour le tournoi Very SUS Arena sur Super Smash Bros. Ultimate',
     image: 'assets/img/VSA.jpg',
-    link: '#',
+    galleryFolder: 'assets/img/VSA/',
+    galleryExt: '.jpg',
+    link: 'projet-insta.html?id=very-sus-arena',
     target: "_self",
     tools: ['Photoshop', 'Blender'],
     category: 'illustration'
   },
   {
+    id: 'dragonfeu-bastos-cup',
     title: 'DragonFeu Bastos Cup',
     description: 'Graphiste pour le tournoi DragonFeu Bastos Cup sur Super Smash Bros. Ultimate',
     image: 'assets/img/DFBC.png',
-    link: '#',
+    galleryFolder: 'assets/img/DFBC/',
+    galleryExt: '.png',
+    link: 'projet-insta.html?id=dragonfeu-bastos-cup',
     target: "_self",
     tools: ['Photoshop'],
     category: 'illustration'
@@ -352,27 +373,6 @@ function createProjectCard(project, isDesign = false) {
     </a>
   `;
 }
-
-// ===== CONTACT FORM =====
-
-// function handleContactForm(event) {
-//   event.preventDefault();
-  
-//   const formData = {
-//     name: document.getElementById('name').value,
-//     email: document.getElementById('email').value,
-//     subject: document.getElementById('subject').value,
-//     message: document.getElementById('message').value
-//   };
-  
-//   // Simuler l'envoi du formulaire
-//   console.log('Form submitted:', formData);
-  
-//   alert('Message envoyé avec succès ! Je vous répondrai dans les plus brefs délais.');
-  
-//   // Réinitialiser le formulaire
-//   event.target.reset();
-// }
 
 // ===== SCROLL EFFECTS =====
 

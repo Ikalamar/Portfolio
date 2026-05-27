@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Détails du projet graphique - Esteban Ringot">
+    <title>Projet Graphisme - Esteban Ringot</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .insta-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 2rem;
+        }
+        .insta-item {
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            border-radius: 8px;
+            cursor: pointer;
+            position: relative;
+        }
+        .insta-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .insta-item:hover img {
+            transform: scale(1.05);
+        }
+        /* Modal Lightbox */
+        .lightbox-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+        }
+        .lightbox-modal.active {
+            display: flex;
+        }
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: 4px;
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .lightbox-close:hover,
+        .lightbox-close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        @media (max-width: 768px) {
+            .insta-gallery {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <a href="index.html" class="logo-text">ER</a>
+            </div>
+
+            <nav class="navbar-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Accueil</a>
+                <a href="developer.html" class="nav-link">Développement</a>
+                <a href="designer.html" class="nav-link active">Graphisme</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="page-section active" style="padding-top: 100px;">
+            <div class="container">
+                <div style="margin-bottom: 2rem;">
+                    <a href="designer.html" class="btn" style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--text-color); text-decoration: none; border: 1px solid var(--border-color); padding: 0.5rem 1rem; border-radius: 4px; background: transparent;">
+                        <i class="fas fa-arrow-left"></i> Retour aux projets
+                    </a>
+                </div>
+                
+                <h1 id="projectTitle" style="text-align: center; margin-bottom: 1rem;">Titre du projet</h1>
+                <p id="projectDescription" style="text-align: center; max-width: 800px; margin: 0 auto; color: var(--text-light);"></p>
+                
+                <div class="tech-tags" id="projectTags" style="justify-content: center; margin-top: 1.5rem;">
+                </div>
+
+                <!-- Gallery -->
+                <div class="insta-gallery" id="instaGallery">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox-modal">
+        <span class="lightbox-close" id="lightboxClose">&times;</span>
+        <img class="lightbox-content" id="lightboxImage">
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" style="margin-top: 3rem;">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Esteban Ringot</h4>
+                <p>Développeur Full Stack & Graphiste</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="developer.html">Développement</a></li>
+                    <li><a href="designer.html">Design</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Réseaux Sociaux</h4>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/estéban-ringot-680763239" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin" style="font-size: 20px;"></i>
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/ikalamar" target="_blank" class="social-link">
+                        <i class="fab fa-github" style="font-size: 20px;"></i>
+                        GitHub
+                    </a>
+                    <a href="https://twitter.com/Ikalamar_" target="_blank" class="social-link">
+                        <i class="fab fa-twitter" style="font-size: 20px;"></i>
+                        Twitter
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span> Esteban Ringot. Tous droits réservés.</p>
+            <p>Accessibilité : partiellement conforme</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get project ID from URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const projectId = urlParams.get('id');
+            
+            if (projectId && typeof designerProjects !== 'undefined') {
+                const project = designerProjects.find(p => p.id === projectId);
+                
+                if (project) {
+                    // Populate details
+                    document.getElementById('projectTitle').textContent = project.title;
+                    document.getElementById('projectDescription').textContent = project.description;
+                    
+                    const tagsContainer = document.getElementById('projectTags');
+                    tagsContainer.innerHTML = project.tools.map(tag => `<span class="tech-tag">${tag}</span>`).join('');
+                    
+                    // Populate gallery
+                    const galleryContainer = document.getElementById('instaGallery');
+                    if (project.galleryFolder) {
+                        let i = 1;
+                        const ext = project.galleryExt || '.jpg';
+                        // Clear container first
+                        galleryContainer.innerHTML = '';
+                        
+                        const loadNextImage = () => {
+                            const imgSrc = `${project.galleryFolder}${i}${ext}`;
+                            const img = new Image();
+                            
+                            img.onload = () => {
+                                // L'image existe, on l'ajoute à la galerie
+                                galleryContainer.innerHTML += `
+                                    <div class="insta-item" onclick="openLightbox('${imgSrc}')">
+                                        <img src="${imgSrc}" alt="${project.title} - Image ${i}">
+                                    </div>
+                                `;
+                                i++; // On passe à la suivante (2, puis 3...)
+                                loadNextImage();
+                            };
+                            
+                            img.onerror = () => {
+                                // Si même la première image n'existe pas
+                                if (i === 1) {
+                                    galleryContainer.innerHTML = `<p style="grid-column: 1/-1; text-align: center;">Veuillez ajouter des images nommées 1${ext}, 2${ext}, etc. dans le dossier.</p>`;
+                                }
+                            };
+                            
+                            img.src = imgSrc;
+                        };
+                        
+                        // Lancer le chargement
+                        loadNextImage();
+                    } else {
+                        // fallback if no gallery folder specified
+                        galleryContainer.innerHTML = `<p style="grid-column: 1/-1; text-align: center;">Aucun dossier d'images défini pour ce projet.</p>`;
+                    }
+                } else {
+                    document.getElementById('projectTitle').textContent = 'Projet introuvable';
+                }
+            } else {
+                document.getElementById('projectTitle').textContent = 'Projet non spécifié';
+            }
+        });
+
+        // Lightbox logic
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImage');
+        const lightboxClose = document.getElementById('lightboxClose');
+
+        function openLightbox(imageSrc) {
+            lightbox.classList.add('active');
+            lightboxImg.src = imageSrc;
+            document.body.style.overflow = 'hidden'; // stop scrolling
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto'; // allow scrolling again
+        }
+
+        lightboxClose.addEventListener('click', closeLightbox);
+        
+        // Close on clicking outside the image
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+        
+        // Close on esc key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+</html>
